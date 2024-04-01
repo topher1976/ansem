@@ -1,6 +1,5 @@
 ---
 - name: First Playbook
-  hosts: app
   remote_user: sysops
   gather_facts: false
 
