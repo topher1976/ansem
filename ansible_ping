@@ -1,0 +1,14 @@
+---
+- name: First Playbook
+  hosts: apps
+  remote_user: sysops
+  gather_facts: false
+
+  tasks:
+  - name: Ansible ping serveres
+    ping:
+    register: ping_info
+
+  - name: Echo Registered Variable
+    debug:
+      var: ping_info
