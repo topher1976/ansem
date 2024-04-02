@@ -1,0 +1,14 @@
+---
+- name: First Playbook
+  hosts: all
+  remote_user: sysops
+  gather_facts: false
+
+  tasks:
+  - name: Return OS Info
+    shell:
+      cmd: cat /etc/debian_version
+    register: os_info
+
+  - name: Echo Registered Variable
+    debug: var=os_info.stdout
