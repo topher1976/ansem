@@ -1,0 +1,17 @@
+---
+- name: Debian - Disable IPv6
+  hosts: all
+  remote_user: sysops
+  gather_facts: false
+  become: yes
+
+  tasks:
+  - name: List uptime for servers
+    shell: uptime -p
+    register: shell_output
+
+  - debug:
+      var: shell_output.stdout
+
+#  - name: Dump all vars
+#    action: template src=/etc/ansible/templates/dumpall.j2 dest=/etc/ansible/reports/uptime.txt
