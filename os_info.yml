@@ -1,5 +1,5 @@
 ---
-- name: First Playbook
+- name: OS Info
   hosts: all
   remote_user: sysops
   gather_facts: false
