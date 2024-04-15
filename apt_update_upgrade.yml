@@ -1,6 +1,6 @@
 ---
 - name: Debian OS Maint.
-  hosts: test
+  hosts: all
   gather_facts: yes
   become: yes
 
