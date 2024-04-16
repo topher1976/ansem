@@ -1,6 +1,6 @@
 ---
 - name: Debian - Disable IPv6
-  hosts: ans_lab
+  hosts: all
   remote_user: sysops
   gather_facts: false
   become: yes
