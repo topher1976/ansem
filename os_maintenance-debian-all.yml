@@ -23,7 +23,7 @@
         sleep: 5
         delay: 5
         timeout: 300
-#      when: packages_installed.changed
+      when: packages_installed.changed
 
     - name: Remove dependencies that are no longer required.
       ansible.builtin.apt:
