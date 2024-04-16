@@ -1,7 +1,7 @@
 ---
 - name: Debian OS Maint.
   hosts: all
-  gather_facts: yes
+  gather_facts: no
   become: yes
 
   tasks:
