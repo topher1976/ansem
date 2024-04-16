@@ -15,7 +15,7 @@
       ansible.builtin.reboot:
       async: 1
       poll: 0
-#      when: packages_installed.changed
+      when: packages_installed.changed
 
     - name: Wait for the reboot to complete if there was a change.
       wait_for_connection:
